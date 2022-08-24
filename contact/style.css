@@ -1,0 +1,460 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight:1000;
+    color: rgb(28, 27, 27);;
+}
+
+.logo, a{
+    text-decoration: none;
+}
+.logo span {
+    color: rgba(218, 26, 99, 0.623);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(28, 27, 27);
+    font-weight: 300;
+    transition: 0.7s;
+}
+
+.nav li a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.hamburger {
+ display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    display: block;
+    background-color: rgb(56, 54, 54);
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.fa-solid {
+    margin-left: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-solid:hover {
+    color: gray;
+}
+
+@media only screen and (max-width:450px) {
+    .container {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px)rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px)rotate(-45deg);
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        right: -100%;
+        transition: 0.5s;
+        background-color: lightgray;
+        z-index: 1;
+    }
+
+    .nav li {
+        margin-top: 15px;
+    }
+
+    .nav li a {
+        color: gray;
+    }
+
+    .nav.active {
+        right: 0%;
+    }
+
+    .icon {
+        margin-left: 120px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+.con {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:450px) {
+    .con {
+        width: 100%;
+        height: fit-content;
+        overflow-x: hidden;
+    }
+
+    .con iframe {
+        width: 90%;
+    }
+}
+
+
+.contact {
+    width: 100%;
+    height: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bx1 {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: column;
+}
+.bx2 {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.box1 h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(64, 64, 64);
+}
+
+.box1 p {
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.box2 p {
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.box3 {
+    font-size: 1.1rem;
+}
+
+.box4 h1 {
+    font-size: 3rem;
+    color: rgb(64, 64, 64);
+}
+
+.box5 {
+    font-size: 2rem;
+}
+
+.box5,.fa-brands {
+    color: #4267B2;
+}
+
+.box6 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box6 h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(64, 64, 64);
+}
+
+#myForm {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#myForm input {
+    width: 90%;
+    height: 35px;
+    padding-left: 30px;
+    font-size: 1rem;
+}
+
+#myForm textarea {
+    width: 90%;
+    height: 150px;
+}
+
+#myForm button {
+    width: 40%;
+    height: 40px;
+    background-color: rgb(64, 64, 64) ;
+    color:white;
+    cursor: pointer;
+}
+
+.input {
+    font-size: larger;
+    color: red;
+    visibility: hidden;
+}
+
+@media only screen and (max-width:450px) {
+    .contact {
+        width: 100%;
+        height:850px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+    .bx1 {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .box1 h1 {
+        font-size: larger;
+        padding-left: 150px;
+    }
+    .box1 p {
+        font-size: 1rem;
+    }
+
+    .bx2{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .box6 h1 {
+        font-size: xx-large;
+    }
+
+    .box4 h1 {
+        font-size: xx-large;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: gray;
+}
+
+#myform {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Input {
+    font-size: larger;
+    background-color: red;
+    color: white;
+    padding: 10px 20px 10px 50px;
+    visibility: hidden;
+}
+
+input {
+    padding: 10px 20px 10px 50px;
+}
+
+#myform #btn {
+    padding: 10px 20px 10px 50px;
+    transform: translateY(0px);
+    text-align: center;
+}
+
+
+@media only screen and (max-width:450px) {
+    footer {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-top: 10px;
+        overflow-x: hidden;
+    }
+
+    #myform {
+        width: 90%;
+    }
+}
+
+.end {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.en1 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.enl1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+}
+
+.enl1 a {
+    color: gray;
+    text-decoration: none;
+}
+.enl2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.en2 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media only screen and (max-width:450px) {
+    .end {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .en2 {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+
+
+

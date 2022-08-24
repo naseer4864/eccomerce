@@ -1,0 +1,676 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight:1000;
+    color: rgb(28, 27, 27);;
+}
+
+.logo,a {
+    text-decoration: none;
+}
+.logo span {
+    color: rgba(218, 26, 99, 0.623);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(28, 27, 27);
+    font-weight: 300;
+    transition: 0.7s;
+}
+
+.nav li a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.hamburger {
+ display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    display: block;
+    background-color: rgb(56, 54, 54);
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.fa-solid {
+    margin-left: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-solid:hover {
+    color: gray;
+}
+
+@media only screen and (max-width:450px) {
+    .container {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px)rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px)rotate(-45deg);
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        right: -100%;
+        transition: 0.5s;
+        background-color: lightgray;
+        z-index: 1;
+    }
+
+    .nav li {
+        margin-top: 15px;
+    }
+
+    .nav li a {
+        color: gray;
+    }
+
+    .nav.active {
+        right: 0%;
+    }
+
+    .icon {
+        margin-left: 50px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.bx1 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.bx2 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+.bx3 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.bx4 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.bx1 img {
+    width: 100%;
+    height: 250px;
+}
+.bx2 img {
+    width: 100%;
+    height: 250px;
+}
+.bx3 img {
+    width: 100%;
+    height: 250px;
+}
+.bx4 img {
+    width: 100%;
+    height: 250px;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    color: rgb(235, 57, 57);
+    border: none;
+    position: relative;
+    bottom: 0%;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.bx1:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx2:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx3:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx4:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+
+@media only screen and (max-width:450px) {
+    .banner {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+}
+
+.shop {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.redline  {
+    width: 400px;
+    height: 3px;
+    background-color: brown;
+}
+
+@media only screen and (max-width:450px){
+    .shop {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .shop h1 {
+        font-size: 1rem;
+    }
+
+    .redline {
+        width: 200px;
+    }
+}
+
+.banner1 {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.bx5 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.bx6 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+.bx7 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.bx8 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.bx5 img {
+    width: 100%;
+    height: 250px;
+}
+.bx6 img {
+    width: 100%;
+    height: 250px;
+}
+.bx7 img {
+    width: 100%;
+    height: 250px;
+}
+.bx8 img {
+    width: 100%;
+    height: 250px;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    color: rgb(235, 57, 57);
+    border: none;
+    position: relative;
+    bottom: 0%;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.bx5:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx6:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx7:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx8:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+
+@media only screen and (max-width:450px) {
+    .banner1 {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+}
+
+.banner2 {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.bx9 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.bx10 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+}
+.bx11 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.bx12 {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.bx9 img {
+    width: 100%;
+    height: 250px;
+}
+.bx10 img {
+    width: 100%;
+    height: 250px;
+}
+.bx11 img {
+    width: 100%;
+    height: 250px;
+}
+.bx12 img {
+    width: 100%;
+    height: 250px;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    color: rgb(235, 57, 57);
+    border: none;
+    position: relative;
+    bottom: 0%;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.bx9:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx10:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx11:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+.bx12:hover button {
+    transform: translateY(-2px);
+    border: 1px solid gray;
+}
+
+@media only screen and (max-width:450px) {
+    .banner2 {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+}
+
+.shp {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.bx13,.bx14,.bx15,.bx16 {
+    width: 320px;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: gray;
+}
+
+.bx13 .fa-solid {
+    font-size: x-large;
+    padding-right: 10px;
+}
+.bx14 .fa-solid {
+    font-size: x-large;
+    padding-right: 10px;
+}
+.bx15 .fa-solid {
+    font-size: x-large;
+    padding-right: 10px;
+}
+.bx16 .fa-solid {
+    font-size: x-large;
+    padding-right: 10px;
+}
+
+
+@media only screen and (max-width:450px) {
+    .shp {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: hidden;
+    }
+
+    .bx13,.bx14,.bx15,.bx16 {
+        width: 90%;
+        height: 100px;
+        background-color: lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: gray;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: gray;
+}
+
+#myform {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Input {
+    font-size: larger;
+    background-color: red;
+    color: white;
+    padding: 10px 20px 10px 50px;
+    visibility: hidden;
+}
+
+input {
+    padding: 10px 20px 10px 50px;
+}
+
+#myform #btn {
+    padding: 10px 20px 10px 50px;
+    transform: translateY(0px);
+    text-align: center;
+}
+
+
+@media only screen and (max-width:450px) {
+    footer {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-top: 10px;
+        overflow-x: hidden;
+    }
+
+    #myform {
+        width: 90%;
+    }
+}
+
+.end {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.en1 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.enl1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+}
+
+.enl1 a {
+    color: gray;
+    text-decoration: none;
+}
+.enl2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.en2 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media only screen and (max-width:450px) {
+    .end {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .en2 {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+

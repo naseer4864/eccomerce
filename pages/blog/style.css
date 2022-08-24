@@ -1,0 +1,475 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight:1000;
+    color: rgb(28, 27, 27);;
+}
+
+.logo span {
+    color: rgba(218, 26, 99, 0.623);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(28, 27, 27);
+    font-weight: 300;
+    transition: 0.7s;
+}
+
+.nav li a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+.hamburger {
+ display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    display: block;
+    background-color: rgb(56, 54, 54);
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+}
+.logo,a {
+    text-decoration: none;
+}
+.fa-solid {
+    margin-left: 10px;
+    transition: all 0.5s ease-in-out;
+    cursor: grab;
+}
+
+
+.fa-solid:hover {
+    color: gray;
+}
+
+@media only screen and (max-width:450px) {
+    .container {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px)rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px)rotate(-45deg);
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        right: -100%;
+        transition: 0.5s;
+        background-color: azure;
+        z-index: 1;
+    }
+
+    .nav li {
+        margin-top: 15px;
+    }
+
+    .nav li a {
+        color: gray;
+    }
+
+    .nav.active {
+        right: 0%;
+    }
+
+    .icon {
+        margin-left: 50px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+.best {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.best p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.brlin {
+    width: 200px;
+    height: 3px;
+    background-color: brown;
+}
+
+.banner7 {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bx20 {
+    width: 350px;
+    height: 400px;
+    ;transition: all 1s ease-in-out
+}
+
+.bx20 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.bx21 {
+    width: 350px;
+    height: 400px;
+}
+.bx21 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.bx22 {
+    width: 350px;
+    height: 400px;
+}
+
+.bx22 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.over1 {
+    width: 80%;
+    height: 250px;
+    position: relative;
+    bottom: 80%;
+    left: 10%;
+    background-color: white;
+    opacity: 0.6;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+
+.over1 p  {
+    font-size: 2rem;
+    color: brown;
+    font-weight: 500;
+    padding: 50px 0px 0px 10px;
+}
+
+.bx20:hover .over1{
+    display: block;
+}
+.bx21:hover .over1{
+    display: block;
+}
+.bx22:hover .over1{
+    display: block;
+}
+
+.over1 h4 {
+    padding: 15px 0px 0px 40px;
+    color: darkslategrey;
+}
+
+.over1 h3 {
+    padding: 30px 0px 0px 70px;
+    color: brown;
+    font-size: larger;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:450px) {
+    .banner7 {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .bx20,.over1 {
+        display: block;
+        background-color: whitesmoke;
+    }
+}
+
+.income {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog1 {
+    width: 500px;
+    height: 300px;
+}
+
+.blog1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog1 p {
+    padding: 10px;
+    color: gray;
+}
+
+.blog2 {
+    width: 500px;
+    height: 300px;
+}
+
+.blog2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog2 p {
+    padding: 10px;
+    color: gray;
+}
+
+.blog3 {
+    width: 500px;
+    height: 300px;
+}
+
+.blog3 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog3 p {
+    padding: 10px;
+    color: gray;
+}
+
+@media only screen and (max-width:450px) {
+    .income {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        overflow-x: hidden;
+    }
+
+    .blog1,.blog2,.blog3 {
+        width: 90%;
+        height: fit-content;
+    }
+
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: gray;
+}
+
+#myform {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Input {
+    font-size: larger;
+    background-color: red;
+    color: white;
+    padding: 10px 20px 10px 50px;
+    visibility: hidden;
+}
+
+input {
+    padding: 10px 20px 10px 50px;
+}
+
+#myform #btn {
+    padding: 10px 20px 10px 50px;
+    transform: translateY(0px);
+    text-align: center;
+}
+
+
+@media only screen and (max-width:450px) {
+    footer {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-top: 10px;
+        overflow-x: hidden;
+    }
+
+    #myform {
+        width: 90%;
+    }
+}
+
+.end {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.en1 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.enl1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+}
+
+.enl1 a {
+    color: gray;
+    text-decoration: none;
+}
+.enl2 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.en2 {
+    width: 700px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@media only screen and (max-width:450px) {
+    .end {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .en2 {
+        width: 100%;
+        height: 40px;
+    }
+}
